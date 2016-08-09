@@ -1,0 +1,9 @@
+[user]
+    email = matt.friedman@saucelabs.com
+    name = Matt Friedman
+[push]
+    default = simple
+[alias]
+    diffw = diff --ignore-space-change --word-diff=color
+[core]
+	excludesfile = ~/.gitignore
