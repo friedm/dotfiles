@@ -12,7 +12,7 @@ PS1="\[\e[1;37m\][\u@\h \W\[\e[0;34m\]\$git_branch\[\e[0;34m\]\$git_dirty\[\e[1;
 
 export TERM=xterm-256color
 export EDITOR="/usr/bin/vim"
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.cargo/bin
 
 set -o vi
 
