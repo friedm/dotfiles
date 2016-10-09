@@ -5,9 +5,9 @@ set modelines=1
 set background=dark
 
 "tabs
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 "misc
@@ -83,6 +83,8 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'kchmck/vim-coffee-script'
+Plug 'w0ng/vim-hybrid'
 Plug 'alfredodeza/pytest.vim'
 Plug 'lervag/vimtex'
 Plug 'dylanaraps/crayon'
@@ -260,7 +262,7 @@ nnoremap <silent><leader>e <Esc>:Pytest next<CR>
 
 nnoremap <leader>u :GundoToggle<CR>
 
-colorscheme desert
+colorscheme hybrid
 highlight Cursor guifg=white guibg=black
 
 
