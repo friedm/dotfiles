@@ -40,13 +40,13 @@ end
 function module.move_to_adjacent_space(delta)
   new_space = module.get_adjacent_space(delta)
   spaces.changeToSpace(new_space)
+  return new_space
 end
  
 function module.move_window_to_adjacent_space(window, delta)
-  --current_space = spaces.activeSpace()
   new_space = module.get_adjacent_space(delta)
   spaces.moveWindowToSpace(window, new_space)
-  --module.focus_in_space(current_space)
+  return new_space
 end
 
 return module
