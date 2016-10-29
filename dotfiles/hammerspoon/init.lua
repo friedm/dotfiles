@@ -24,7 +24,6 @@ hotkey.bind(hyper, "return", function()
   hs.application.launchOrFocus("Firefox")
 end)
 
-
 -- spaces
 hotkey.bind(super, 'h', function()
   new_space = spaces.move_to_adjacent_space(-1)

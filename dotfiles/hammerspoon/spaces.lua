@@ -32,12 +32,38 @@ function module.get_adjacent_space(delta)
   return space_ids[current_index]
 end
 
+last_focused = {}
+local function get_mru_window_in_space(space_id)
+  for index in ipairs(last_focused) do
+    id = last_focused[index].space
+    if space_id == id then
+      return last_focused[index].win
+    end
+  end
+  return nil
+end
+
 function module.focus_in_space(space_id)
   spaces_tab = spaces.allWindowsForSpace(space_id)
-  spaces_tab[next(spaces_tab)]:focus()
+
+  win = spaces_tab[next(spaces_tab)]
+  win = get_mru_window_in_space(space_id) or win
+  win:focus()
+end
+
+local function update_space_mru_window_cache() 
+  current_space = spaces.activeSpace()
+  for index in ipairs(last_focused) do
+    if last_focused[index].space == current_space then
+      table.remove(last_focused, index)
+    end
+  end
+  table.insert(last_focused, 1, {space=spaces.activeSpace(), win=hs.window.focusedWindow()})
 end
 
 function module.move_to_adjacent_space(delta)
+  update_space_mru_window_cache()
+
   new_space = module.get_adjacent_space(delta)
   spaces.changeToSpace(new_space)
   return new_space
