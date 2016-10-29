@@ -48,7 +48,11 @@ function module.focus_in_space(space_id)
 
   win = spaces_tab[next(spaces_tab)]
   win = get_mru_window_in_space(space_id) or win
-  win:focus()
+  if win == nil then
+    hs.window.desktop():focus()
+  else
+    win:focus()
+  end
 end
 
 local function update_space_mru_window_cache() 
