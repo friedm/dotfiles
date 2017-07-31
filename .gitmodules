@@ -1,3 +1,6 @@
 [submodule "bash/.bash/git-aware-prompt"]
 	path = bash/.bash/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt
+[submodule "fzf/.fzf"]
+	path = fzf/.fzf
+	url = https://github.com/junegunn/fzf
