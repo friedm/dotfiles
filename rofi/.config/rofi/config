@@ -1,0 +1,7 @@
+rofi.modi: window,run
+rofi.font: mono 10
+rofi.lines: 4
+rofi.bw: 1
+rofi.width: 30
+rofi.hide-scrollbar: true
+rofi.fuzzy: true
