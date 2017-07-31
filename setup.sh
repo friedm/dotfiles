@@ -1,6 +1,7 @@
 git submodule update --init
 stow bash --no-folding
 stow fish --no-folding
+stow user-dirs --no-folding
 stow fzf --no-folding
 yes | ~/.fzf/install
 stow tmux --no-folding
