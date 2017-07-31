@@ -77,7 +77,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/YankRing.vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
