@@ -1,0 +1,34 @@
+"3.8 (created: 2013/10/13 18:08:56)
+
+set defsearch=duckduckgo
+set complete=l
+
+set noscrollbars
+
+"set tabnumbers
+
+set hintchars="asdfghjklcvnm"
+
+highlight Hint font-size:13px;color:white;background-color:red;font-weight:bold;text-transform:uppercase;
+
+set! browser.tabs.closeButtons=2
+set! browser.tabs.tabClipWidth=90
+
+noremap j 3j
+noremap k 3k
+map J gT
+map K gt
+
+noremap x :quit<CR>
+noremap q :quit<CR>
+map d <Nop>
+noremap t b
+
+map b :set complete=b<CR>:open 
+map B :set complete=b<CR>:tabopen 
+map o :set complete=l<CR>:open 
+map O :set complete=l<CR>:tabopen 
+
+" vim: set ft=vimperator:
+
+inoremap jk <ESC>
