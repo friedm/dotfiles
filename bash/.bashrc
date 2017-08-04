@@ -1,5 +1,6 @@
 alias ls='ls -G'
 alias la='ls -a -G'
+alias ll='ls -l -G'
 alias grep='grep --color=auto'
 alias rgrep='grep --color=auto -REn'
 alias gdiff='git diffw --no-index'
