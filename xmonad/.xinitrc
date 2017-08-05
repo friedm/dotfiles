@@ -8,6 +8,6 @@ setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Caps_Lock=Escape'
 xmodmap -e 'keycode 94 = Shift_L'
 
-xautolock -time 3 -locker 'physlock -sd && sudo /usr/sbin/pm-suspend' &
+xautolock -time 10 -locker 'physlock -sd && sudo /usr/sbin/pm-suspend' &
 
 exec xmonad
