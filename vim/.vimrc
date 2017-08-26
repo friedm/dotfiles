@@ -79,6 +79,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 

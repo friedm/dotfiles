@@ -1,9 +1,13 @@
 [user]
-    email = matt@friedm.com
-    name = Matt Friedman
+  email = matt@friedm.com
+  name = Matt Friedman
 [push]
-    default = simple
+  default = simple
 [alias]
-    diffw = diff --ignore-space-change --word-diff=color
+  diffw = diff --ignore-space-change --word-diff=color
+  contributors = !sh -c \"git log --pretty='%aN <%aE>' $1 | sort | uniq\"
+  graph = log --graph --abbrev-commit --decorate --date=relative --tags --pretty=oneline
+  graphv = log --graph --abbrev-commit --decorate --date=relative --tags
+  wip = for-each-ref --sort=-committerdate refs/heads/
 [core]
-    excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
