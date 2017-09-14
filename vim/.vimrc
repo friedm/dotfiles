@@ -129,3 +129,4 @@ let g:yankring_history_dir = '~/.yr'
 
 colorscheme hybrid
 highlight Cursor guifg=white guibg=black
+highlight Visual cterm=reverse ctermbg=NONE
