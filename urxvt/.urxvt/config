@@ -11,7 +11,7 @@ URxvt*secondaryWheel: 1
 URxvt*perl-ext: default,matcher
 URxvt*perl-ext-common:
 
-URxvt*url-launcher: /home/matt/bin/primary_browser
+URxvt*url-launcher: /usr/bin/firefox
 URxvt*matcher.button: 1
 
 URxvt*iso14755: false
