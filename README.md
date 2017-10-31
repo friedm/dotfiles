@@ -13,11 +13,12 @@ First clone the repo to any directory in $HOME (should be top-level).
 ```
 
 #### Graphical
-* xmonad, x11-server-utils, xinit, xcape
+* xmonad, x11-server-utils, xinit, xcape, xclip, xdg-utils
 * xautolock, physlock, pm-utils, upower
 * urxvt, rofi, icecat/firefox, vimperator
 
 ``` bash
+$HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
 ./setup_graphical.sh
 ```
 
