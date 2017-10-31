@@ -1,6 +1,6 @@
 "3.8 (created: 2013/10/13 18:08:56)
 
-set defsearch=duckduckgo
+set defsearch=google
 set complete=l
 
 set noscrollbars
@@ -24,8 +24,6 @@ noremap q :quit<CR>
 map d <Nop>
 noremap t b
 
-map b :set complete=b<CR>:open 
-map B :set complete=b<CR>:tabopen 
 map o :set complete=l<CR>:open 
 map O :set complete=l<CR>:tabopen 
 
