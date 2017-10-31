@@ -42,5 +42,8 @@ export TERM=xterm-256color
 export EDITOR="/usr/bin/nvim"
 export PATH=$PATH:$HOME/bin:$HOME/.cargo/bin
 
+export GOROOT=$HOME/.go1.9
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/.go
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
