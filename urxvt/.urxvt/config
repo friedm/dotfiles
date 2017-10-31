@@ -1,5 +1,5 @@
-URxvt*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=14
-URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=14
+URxvt*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=28
+URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=28
 URxvt*letterSpace: -2
 
 URxvt*scrollBar: false
@@ -11,7 +11,7 @@ URxvt*secondaryWheel: 1
 URxvt*perl-ext: default,matcher
 URxvt*perl-ext-common:
 
-URxvt*url-launcher: /home/matt/bin/icecat
+URxvt*url-launcher: /home/matt/bin/primary_browser
 URxvt*matcher.button: 1
 
 URxvt*iso14755: false
