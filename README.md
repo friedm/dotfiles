@@ -6,17 +6,17 @@ Configuration files for development environment, managed with GNU stow.
 First clone the repo to any directory in $HOME (should be top-level).
 
 #### Base
-Requires:
-* bash, fish tmux, vim, neovim, git
+Install:
+* git, bash, tmux, vim, neovim, exa, rg
 
 ``` bash
 ./setup.sh
 ```
 
 #### Graphical
-Requires:
+Install:
 * xmonad, xmodmap, xcape, xautolock, physlock
-* urxvt, rofi, icecat, vimperator
+* urxvt, rofi, icecat/firefox, vimperator
 
 ``` bash
 ./setup_graphical.sh
