@@ -13,3 +13,4 @@ stow vim --no-folding
 stow nvim --no-folding
 vim +PlugInstall +qall
 nvim +PlugInstall +qall
+stow bin --no-folding
