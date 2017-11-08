@@ -10,7 +10,7 @@ xrandr --output DP-1 --right-of eDP-1 --rotate left --auto --scale 1.6x1.6
 
 # trackball
 xinput set-int-prop "Kensington Expert Wireless TB" "Evdev Wheel Emulation" 8 1
-xinput set-int-prop "Kensington Expert Wireless TB" "Evdev Wheel Emulation Button" 8 2
+xinput set-int-prop "Kensington Expert Wireless TB" "Evdev Wheel Emulation Button" 8 3
 
 # touchpad click
 synclient TouchpadOff=2
