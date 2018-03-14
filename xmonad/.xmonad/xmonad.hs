@@ -21,6 +21,7 @@ myKeys =
   , ("M-t", spawn "urxvt -e bash -c 'tmux attach || tmux'")
   , ("M-S-t", spawn "urxvt")
   , ("M-S-l", spawn "xautolock -locknow")
+  , ("M-<Space>", withFocused $ windows . W.sink)
   ]
 
 myLayout = toggleLayouts 
