@@ -81,6 +81,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
 

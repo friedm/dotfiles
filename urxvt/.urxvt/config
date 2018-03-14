@@ -1,5 +1,5 @@
-URxvt*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=28
-URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=28
+URxvt*font: xft:DejaVu Sans Mono:antialias=true:pixelsize=32
+URxvt*boldFont: xft:DejaVu Sans Mono:style=bold:antialias=true:pixelsize=32
 URxvt*letterSpace: -2
 
 URxvt*scrollBar: false
