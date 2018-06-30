@@ -9,5 +9,5 @@ stow tmux --no-folding
 mkdir ~/.yr &> /dev/null || true
 stow vim --no-folding
 stow nvim --no-folding
-yes | nvim +PlugInstall +qall
+nvim +PlugInstall +qall
 stow bin --no-folding

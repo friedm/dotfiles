@@ -80,11 +80,18 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 Plug 'fatih/vim-go'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
+
+let g:racer_cmd = "/home/friedm/.racer/target/release/racer"
+let g:racer_experimental_completer = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 nnoremap <S-j> :bprevious<cr>
 nnoremap <S-k> :bnext<cr>
@@ -100,9 +107,9 @@ nnoremap <leader>x :bd<cr>
 
 highlight LineNr ctermfg=DarkGrey
 
-hi TabLine guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
-hi TabLineSel guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
-hi TabLineFill guifg=#999 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
+silent! hi TabLine guifg=#333 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
+silent! hi TabLineSel guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
+silent! hi TabLineFill guifg=#999 guibg=#222 gui=none ctermfg=254 ctermbg=238 cterm=none
 
 function! Tabline()
 	let s = ''
@@ -130,6 +137,6 @@ set tabline=%!Tabline()
 
 let g:yankring_history_dir = '~/.yr'
 
-colorscheme hybrid
+silent! colorscheme hybrid
 highlight Cursor guifg=white guibg=black
 highlight Visual cterm=reverse ctermbg=NONE
