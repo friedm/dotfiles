@@ -1,0 +1,27 @@
+set editorcmd urxvt vim
+
+set searchengine google
+
+set hintfiltermode vimperator-reflow
+set hintchars asdfghjklcvnm
+
+set csp clobber
+fixamo
+
+set theme dark
+
+guiset gui none
+guiset navbar none
+guiset tabs always
+guiset hoverlink none
+
+bind J tabprev
+bind K tabnext
+bind x tabclose
+bind O fillcmdline tabopen
+
+
+" Comment toggler
+bind ;c  hint -c [class*="expand"],[class="togg"]
+
+autocmd DocStart www.reddit.com urlmodify -t www old
