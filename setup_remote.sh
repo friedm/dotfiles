@@ -7,5 +7,5 @@ stow git --no-folding
 stow remote_tmux --no-folding
 mkdir ~/.yr &> /dev/null || true
 stow vim --no-folding
-vim +PlugInstall +qall
 stow nvim --no-folding
+nvim +PlugInstall +qall
