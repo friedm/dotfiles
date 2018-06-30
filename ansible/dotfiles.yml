@@ -30,13 +30,13 @@
         dest: $HOME/dotfiles
         version: master
         force: yes
-      tags: dotfiles
+      tags: dotfiles,update
 
     - name: run setup_remote.sh
       shell: bash setup_remote.sh
       args:
         chdir: $HOME/dotfiles
-      tags: dotfiles
+      tags: dotfiles,update
 
     - name: set up neovim ppa
       become: yes
