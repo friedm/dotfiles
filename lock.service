@@ -1,0 +1,9 @@
+[Unit]
+Description=lock on suspend
+
+[Service]
+User=${USER}
+ExecStart=/usr/bin/physlock -s
+
+[Install]
+WantedBy=sleep.target
