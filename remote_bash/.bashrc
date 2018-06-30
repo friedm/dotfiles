@@ -6,7 +6,7 @@ fi
 
 set -o vi
 
-alias ls='ls -C'
+alias ls='ls --color=auto -C'
 alias la='ls -a -G'
 alias ll='ls -l'
 alias grep='grep --color=auto'
