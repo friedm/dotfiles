@@ -5,6 +5,7 @@ import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Layout.ToggleLayouts
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Fullscreen
+import XMonad.Layout.ResizableTile ( ResizableTall(..), MirrorResize(MirrorShrink, MirrorExpand) )
 import XMonad.Hooks.ManageDocks (avoidStruts)
 import System.IO
 import Data.Monoid
@@ -21,12 +22,15 @@ myKeys =
   , ("M-t", spawn "urxvt -e bash -c 'tmux attach || tmux'")
   , ("M-S-t", spawn "urxvt")
   , ("M-S-l", spawn "xautolock -locknow")
-  , ("M-<Space>", withFocused $ windows . W.sink)
+  , ("M-S-<Space>", withFocused $ windows . W.sink)
+  , ("M-<Up>", (sendMessage MirrorExpand))
+  , ("M-<Left>", (sendMessage MirrorExpand))
+  , ("M-<Down>", (sendMessage MirrorShrink))
+  , ("M-<Right>", (sendMessage MirrorShrink))
   ]
 
-myLayout = toggleLayouts 
-        (noBorders (fullscreenFull Full))
-        (Tall 1 (3/100) (1/2))
+myLayout = tall ||| Mirror tall ||| Full
+  where tall = ResizableTall 1 (3/100) (1/2) []
 
 main = do xmonad $ ewmh $ fullscreenSupport $ defaultConfig {
     modMask = mod1Mask,
