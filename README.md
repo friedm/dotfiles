@@ -12,6 +12,13 @@ First clone the repo to any directory in $HOME (should be top-level).
 ./setup.sh
 ```
 
+#### Remote
+* (git, stow), bash, tmux, vim, neovim
+
+``` bash
+./setup_remote.sh
+```
+
 #### Graphical
 * xmonad, x11-server-utils, xinit, xcape, xclip, xdg-utils
 * xautolock, physlock, pm-utils
