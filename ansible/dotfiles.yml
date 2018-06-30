@@ -1,0 +1,70 @@
+---
+- hosts: all
+  tasks:
+    - name: update apt cache
+      become: yes
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+      tags: dotfiles
+
+    - name: set up epel repo on centos
+      become: yes
+      package:
+        name: epel-release
+        state: present
+      when: ansible_distribution == 'CentOS'
+      tags: dotfiles
+
+    - name: install dependencies
+      become: yes
+      package:
+        name: bash,git,stow,vim
+        state: present
+      tags: dotfiles
+
+    - name: clone dotfiles repo
+      git:
+        repo: 'https://github.com/friedm/dotfiles.git'
+        dest: $HOME/dotfiles
+        version: master
+        force: yes
+      tags: dotfiles
+
+    - name: run setup_remote.sh
+      shell: bash setup_remote.sh
+      args:
+        chdir: $HOME/dotfiles
+      tags: dotfiles
+
+    - name: set up neovim ppa
+      become: yes
+      apt_repository:
+        repo: 'ppa:neovim-ppa/stable'
+        state: present
+      when: ansible_distribution == 'Ubuntu'
+      tags: packages
+
+    - name: install additional packages
+      become: yes
+      package:
+        name: tmux,neovim
+        state: present
+      tags: packages
+
+    - name: install additional packages -- ubuntu/debian-specific
+      become: yes
+      package:
+        name: silversearcher-ag
+        state: present
+      when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+      tags: packages
+
+    - name: install additional packages -- yum/pacman-specific
+      become: yes
+      package:
+        name: the_silver_searcher
+        state: present
+      when: ansible_os_family == 'RedHat' or ansible_distribution == 'Arch Linux'
+      tags: packages
