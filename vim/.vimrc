@@ -60,9 +60,6 @@ nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w>s<C-l>:e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-inoremap <esc> <nop>
-inoremap jk <ESC>
-
 nnoremap <leader>w <C-w>s<C-w>l
 
 nnoremap <C-h> <C-w>h
