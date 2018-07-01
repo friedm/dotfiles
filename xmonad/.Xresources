@@ -5,3 +5,4 @@ Xft.hintstyle: hintfull
 Xft.dpi: 170
 
 URxvt.termName: xterm-256color
+URxvt.keysym.Shift-Insert: eval:paste_clipboard
