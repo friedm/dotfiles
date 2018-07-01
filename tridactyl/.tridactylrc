@@ -23,5 +23,3 @@ bind O fillcmdline tabopen
 
 " Comment toggler
 bind ;c  hint -c [class*="expand"],[class="togg"]
-
-autocmd DocStart www.reddit.com urlmodify -t www old

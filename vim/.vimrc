@@ -84,6 +84,8 @@ Plug 'racer-rust/vim-racer'
 Plug 'fatih/vim-go'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-scripts/groovy.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 

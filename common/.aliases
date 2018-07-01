@@ -1,0 +1,13 @@
+alias c="xclip -selection c"
+
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l --git'
+alias lls='ls -C'
+alias lla='ls -a -G'
+alias lll='ls -l'
+alias grep='grep --color=auto'
+alias rgrep='grep --color=auto -REn'
+alias gdiff='git diffw --no-index'
+alias n='nvim'
+alias v='vim'
