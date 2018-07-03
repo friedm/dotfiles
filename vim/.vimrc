@@ -67,12 +67,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-syntax on
+filetype off
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/YankRing.vim'
-Plug 'w0ng/vim-hybrid'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -83,8 +83,12 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-scripts/groovy.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
+
+syntax on
+filetype plugin indent on
 
 let g:racer_cmd = "/home/friedm/.racer/target/release/racer"
 let g:racer_experimental_completer = 1
@@ -136,6 +140,6 @@ set tabline=%!Tabline()
 
 let g:yankring_history_dir = '~/.yr'
 
-silent! colorscheme hybrid
+colorscheme deep-space
 highlight Cursor guifg=white guibg=black
 highlight Visual cterm=reverse ctermbg=NONE
