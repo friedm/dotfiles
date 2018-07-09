@@ -11,7 +11,7 @@ fixamo
 set theme dark
 
 guiset gui none
-guiset navbar none
+guiset navbar hidden
 guiset tabs always
 guiset hoverlink none
 
