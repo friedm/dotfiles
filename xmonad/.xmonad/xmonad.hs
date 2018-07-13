@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Actions.UpdatePointer
 import XMonad.Util.Run
 import XMonad.Util.EZConfig
 import XMonad.Hooks.EwmhDesktops (ewmh)
@@ -38,7 +39,8 @@ myLayout = mkToggle (single FULL) (tall ||| Mirror tall)
 main = do xmonad $ ewmh $ fullscreenSupport $ defaultConfig {
     modMask = mod1Mask,
     terminal = "urxvt",
-    focusFollowsMouse = False,
+    focusFollowsMouse = True,
     borderWidth = 0,
-    layoutHook = myLayout
+    layoutHook = myLayout,
+    logHook = updatePointer (0.5, 0.5) (0.9, 0.9)
     } `additionalKeysP` myKeys
